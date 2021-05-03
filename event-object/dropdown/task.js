@@ -18,8 +18,13 @@ for (let item of dropdownItem) {
     if (dropdownList.classList.contains('dropdown__list_active')) {
       event.preventDefault();
       document.querySelector('.dropdown__value').textContent = item.textContent;
+      document.querySelector('.dropdown__list_active').classList.remove('dropdown__list_active')
     }
     show;
   })
 }
+
+
+
+
 
