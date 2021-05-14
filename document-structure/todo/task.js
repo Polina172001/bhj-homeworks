@@ -22,13 +22,15 @@ function htmlAdd () {
 
 
 input.addEventListener('keydown', (e) => {
-  if (input.value != "" && e.code === 'Enter') {
+  if (input.value.trim() != "" && e.code === 'Enter') {
     htmlAdd(input.value);
+    e.preventDefault();
   }  
 })
 
-btn.addEventListener('click', () => {
-  if (input.value != '') {
+btn.addEventListener('click', (e) => {
+  e.preventDefault();
+  if (input.value.trim() != '') {
     htmlAdd(input.value);
   }
 })
