@@ -9,7 +9,7 @@ links.forEach(item => {
     let text = item.getAttribute('title');
     let position = item.getBoundingClientRect();
     if (item.querySelector('.tooltip')) {
-      item.querySelector('.tooltip').classList.add("hidden");
+      item.querySelector('.tooltip').classList.toggle("tooltip_active");
     } else {
       item.insertAdjacentHTML('afterbegin', `<div class="tooltip tooltip_active" 
       style="left: ${position.left + "px"}; top: ${position.top + 20 + "px"}"> ${text} </div>`);
